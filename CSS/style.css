@@ -1,8 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 body{
     background: #e2e2e2;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100vh;
+    width: 100%;
+}
+.game-container{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 50%;
+    gap: 20px;
+}
+.game-container .gamepad{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+   height: 50vh;
+   gap: 5px;
+   flex: 66%;
+}
+.game-container .game-info{
+   width: 33%;
+}
+.game-info #activePlayer{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    font-size: larger;
+    border-radius: 10px;
+    line-height: 20px;
+    background-color: rgb(166, 160, 160);
+}
+.container .gamepad span{
+    cursor: pointer;
+    background-color: rgb(127, 127, 127);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    text-align: center;
+    color: #090606;
+    font-size: 30px;
+    font-weight: 700;
+    box-shadow:inset -5px -10px 30px 0px rgba(0, 0, 0, 0.537),
+    inset 5px 10px 20px 0px rgba(245, 245, 245, 0.844),
+    inset -4px -7px 20px 0px rgba(0, 0, 0, 0.537),
+    inset 4px 7px 20px 0px rgb(245, 245, 245);
+    
+}
+.container .gamepad span:hover{
+    background-color: #caeb54;
+}
+#result{
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.game-info button{
+    outline: 0;
+    border: 0;
+    background: #bee045;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+    padding: 8px 16px;
+}
+.game-info button:hover{
+    background: #a8c73a;
+}
+
+/* .container .gamepad span{
+    background-color: rgb(127, 127, 127);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    text-align: center;
+    color: #e2e2e2;
+    font-size: 30px;
+    font-weight: 700;
+    box-shadow:inset -5px -10px 30px 0px rgba(0, 0, 0, 0.537),
+    inset 5px 10px 20px 0px rgba(245, 245, 245, 0.844),
+    inset -4px -7px 20px 0px rgba(0, 0, 0, 0.537),
+    inset 4px 7px 20px 0px rgb(245, 245, 245);
+} */
+@media only screen and (max-width:768px){
+    .game-container{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:481px){
+    
 }
